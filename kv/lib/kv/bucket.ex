@@ -9,10 +9,16 @@ defmodule KV.Bucket do
   end
 
   @doc """
-  Put item in an agent bucket
+  Put item in an agent bucket key => value
   """
+  def put(bucket, key, value) do
+    Agent.put(bucket, &Map.put(&1, key, value))
+  end
 
   @doc """
-  Get item from an agent bucket
+  Get item from an agent bucket by key.
   """
+  def get(bucket, key) do
+    Agent.get(bucket, &Map.get(&1, key))
+  end
 end
