@@ -20,7 +20,7 @@ defmodule KV.BucketTest do
     KV.Bucket.put(bucket, "milk", 3)
     assert KV.Bucket.get(bucket, "milk") == 3
 
-    KV.Bucket.delete(bucket, "milk", 3)
+    KV.Bucket.delete(bucket, "milk")
     assert KV.Bucket.get(bucket, "milk") == nil
   end
 end
