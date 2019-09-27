@@ -27,5 +27,6 @@ defmodule KV.Bucket do
   """
   def delete(bucket, key) do
     Agent.get_and_update(bucket, &Map.pop(&1, key))
+    ## Agent.update(bucket, &Map.put(&1, key, nil))
   end
 end
