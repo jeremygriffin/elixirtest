@@ -12,7 +12,12 @@ defmodule KV.Bucket do
   Put item in an agent bucket key => value
   """
   def put(bucket, key, value) do
-    Agent.update(bucket, &Map.put(&1, key, value))
+    # @NOTE: Here is the client code
+    Agent.update(bucket, fn state ->
+      # @NOTE: Here is the server code
+      Map.put(state, key, value)
+    end)
+    # back in the client code
   end
 
   @doc """
