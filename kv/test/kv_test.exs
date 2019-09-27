@@ -9,5 +9,4 @@ defmodule KVTest do
   test "greets the world Success" do
     assert KV.hello() == :world
   end
-
 end

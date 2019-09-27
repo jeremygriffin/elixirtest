@@ -7,9 +7,9 @@ defmodule KV do
 
   Hello world.
 
-##  Examples
+  ##  Examples
 
-iex> KV.hello()
+  iex> KV.hello()
       :world
 
   """
