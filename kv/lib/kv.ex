@@ -1,15 +1,14 @@
 defmodule KV do
   @moduledoc """
-    Documentation for KV.
+  Documentation for KV.
   """
 
   @doc """
-
   Hello world.
 
-  ##  Examples
+  ## Examples
 
-  iex> KV.hello()
+      iex> KV.hello()
       :world
 
   """
