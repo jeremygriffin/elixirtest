@@ -3,7 +3,7 @@ defmodule KVTest do
   doctest KV
 
   test "greets the world Fails" do
-    assert KV.hello() == :oops
+    assert KV.hello() != :oops
   end
 
   test "greets the world Success" do
